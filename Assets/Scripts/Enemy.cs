@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -77,6 +78,7 @@ public class Enemy : MonoBehaviour
         if(enemyHP <= 0)
         {
             Debug.Log("died");
+            SceneManager.LoadScene("Restart");
             GetComponent<BoxCollider>().enabled = false;
             GameObject.Destroy(gameObject);
         }

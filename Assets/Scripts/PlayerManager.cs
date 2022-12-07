@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (isGameOver)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Restart");
             Debug.Log("Defeat");
         }
     }

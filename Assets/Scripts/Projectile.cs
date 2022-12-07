@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float radius = 1;
-    public int damageAmount = 20;
+    public int damageAmount = 100;
     private void OnCollisionEnter(Collision collision)
     {
 
