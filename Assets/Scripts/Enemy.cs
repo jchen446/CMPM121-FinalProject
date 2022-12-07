@@ -9,22 +9,23 @@ public class Enemy : MonoBehaviour
 
     public Transform Player;
 
-    public float MobDistanceRun = 4.0f;
+    public float MobDetectionDistance = 100.0f;
+    public Animator animator;
 
-    public GameObject projectile;
+    //public GameObject projectile;
 
-    public Transform projectilePoint;
+    //public Transform projectilePoint;
 
     public int enemyHP = 100;
 
-    public float timeBetweenAttacks;
+    //public float timeBetweenAttacks;
 
-    bool alreadyAttacked;
+    //bool alreadyAttacked;
 
     // Start is called before the first frame update
     void Start()
     {
-        Mob = GetComponent<NavMeshAgent>();
+        //Mob = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -32,35 +33,43 @@ public class Enemy : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, Player.transform.position);
 
-        if (distance < MobDistanceRun)
+        if (distance < MobDetectionDistance)
         {
             Vector3 dirToPlayer = transform.position - Player.transform.position;
 
             Vector3 newPos = transform.position - dirToPlayer;
 
             Mob.SetDestination(newPos);
+            
 
-            Shoot();
+            //Shoot();
+        }
+        //animating the bear
+
+        if (Mob.velocity.x > 0 || Mob.velocity.z > 0){
+            animator.Play("RunForward");
+        }else{
+            animator.Play("Idle");
         }
     }
 
-    public void Shoot()
-    {
-        if (!alreadyAttacked)
-        {
-            Rigidbody rb = Instantiate(projectile, projectilePoint.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 30f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 7, ForceMode.Impulse);
+    // public void Shoot()
+    // {
+    //     if (!alreadyAttacked)
+    //     {
+    //         Rigidbody rb = Instantiate(projectile, projectilePoint.position, Quaternion.identity).GetComponent<Rigidbody>();
+    //         rb.AddForce(transform.forward * 30f, ForceMode.Impulse);
+    //         rb.AddForce(transform.up * 7, ForceMode.Impulse);
 
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }
-    }
+    //         alreadyAttacked = true;
+    //         Invoke(nameof(ResetAttack), timeBetweenAttacks);
+    //     }
+    // }
 
-    private void ResetAttack()
-    {
-        alreadyAttacked = false;
-    }
+    // private void ResetAttack()
+    // {
+    //     alreadyAttacked = false;
+    // }
     
     public void TakeDamage(int damageAmount)
     {
@@ -68,7 +77,7 @@ public class Enemy : MonoBehaviour
         if(enemyHP <= 0)
         {
             Debug.Log("died");
-            GetComponent<CapsuleCollider>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
             GameObject.Destroy(gameObject);
         }
         else
