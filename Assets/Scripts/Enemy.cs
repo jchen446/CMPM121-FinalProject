@@ -78,8 +78,8 @@ public class Enemy : MonoBehaviour
         if(enemyHP <= 0)
         {
             Debug.Log("died");
-            SceneManager.LoadScene("Restart");
-            GetComponent<BoxCollider>().enabled = false;
+            //SceneManager.LoadScene("Restart");
+            GetComponent<CapsuleCollider>().enabled = false;
             GameObject.Destroy(gameObject);
         }
         else
