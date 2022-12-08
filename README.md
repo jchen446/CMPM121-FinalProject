@@ -18,3 +18,9 @@ Foliage:
 
 Trees:
 - https://assetstore.unity.com/packages/3d/free-low-poly-pack-65375
+
+Bear:
+- https://assetstore.unity.com/packages/3d/characters/animals/free-stylized-bear-rpg-forest-animal-228910
+
+Grass Texture:
+- https://assetstore.unity.com/packages/2d/textures-materials/floors/hand-painted-grass-texture-78552
