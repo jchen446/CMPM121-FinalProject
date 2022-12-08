@@ -1,8 +1,8 @@
 # CMPM121-FinalProject
 
-Contributors: Jason Chen, Peyton Jones, Keaton Haux, Jose Velarde-Ruiz
+## Contributors: Jason Chen, Peyton Jones, Keaton Haux, Jose Velarde-Ruiz
 
-NPC Chase Scene: Bear Infested Forest
+### NPC Chase Scene: Bear Infested Forest
 
 Particle System: We have a campfire next to the players starting scene which has a particle system on it.
 	Along with that we are using a particle system when the bullet lands.
