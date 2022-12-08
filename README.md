@@ -25,26 +25,27 @@ There are also plenty of obstacle such as trees, bushs, rocks, and event the ter
 We used a directional light in our scene as the sun and we have it to make the scene darker and more of a
 	scary bear chase scene. Also we have textured/materialized everything and added a new skybox to help
 	convey the outdoor scene.
+# References
 
-Type of objects: Mostly natural foliage and rocks
+### Type of objects: Mostly natural foliage and rocks
 
-Skybox:
+#### Skybox:
 - https://assetstore.unity.com/packages/2d/textures-materials/sky/customizable-skybox-174576
 
 
-Objects:
+#### Objects:
 
-Rocks:
+#### Rocks:
 - https://assetstore.unity.com/packages/3d/environments/low-poly-rocks-pack-70164
 
-Foliage:
+#### Foliage:
 - https://assetstore.unity.com/packages/3d/vegetation/low-poly-foliage-66638
 
-Trees:
+#### Trees:
 - https://assetstore.unity.com/packages/3d/free-low-poly-pack-65375
 
-Bear:
+#### Bear:
 - https://assetstore.unity.com/packages/3d/characters/animals/free-stylized-bear-rpg-forest-animal-228910
 
-Grass Texture:
+#### Grass Texture:
 - https://assetstore.unity.com/packages/2d/textures-materials/floors/hand-painted-grass-texture-78552
